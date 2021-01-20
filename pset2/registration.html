@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <form action="login.html" onsubmit="return verifyPassword()" method="GET">
+
+        <h2>REGISTRATION</h2>
+        <h4>Please fill in the registration !</h4>
+
+
+
+        <label for="name">Name : </label><br>
+        <input type="text" name="name" id="name" /><br><br>
+
+        <label for="password">Password : </label><br>
+        <input type="password" name="password" id="password" />
+        <span id="message" style="color:red"> </span> <br>
+        </label>
+
+        <br>
+
+        <label for="confirm password">Re-enter password : </label><br>
+        <input type="password" name="password re-enter" id="password1" />
+        <div class="registrationFormAlert" style="color:green;" id="CheckPasswordMatch"></div>
+
+        <br>
+
+        <label for="email">Email : </label><br>
+        <input type="email" name="email" id="email" /><br><br>
+
+        <label for="phone">Phone : </label><br>
+        <input type="tel" name="phone" id="phone" />
+        <span id="msg" style="color:red"> </span>
+        <span id="charMsg" style="color:red"> </span> <br>
+
+        <br>
+        <label for="text">Address : </label><br>
+        <input type="text" name="address" id="address" />
+
+        <p>Already register? <a href="login.html">Login</a></p>
+        <h3>-------------------------------------------------------------------------------------------------------
+        </h3>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function verifyPassword(pswd) {
+            var pw = document.getElementById("password").value;
+            var name2 = document.getElementById("phone").value;
+
+            if (pw == "") {
+                document.getElementById("message").innerHTML = "**Fill in please!";
+                return false;
+            }
+            if (pw.length < 10) {
+                document.getElementById("message").innerHTML = "**password length must be atleast 10 characters and more than that";
+                return false;
+            }
+            if (pw.length > 15) {
+                document.getElementById("message").innerHTML = "**password length must not exceed 15 characters";
+                return false;
+            }
+
+            if (name2.length < 10) {
+                document.getElementById("msg").innerHTML = "**phone number must be atleast 10 characters or more than that with all number";
+                return false;
+            }
+            if (isNaN(name2)) {
+                document.getElementById("charMsg").innerHTML = "**Only numbers are allowed";
+                return false;
+            }
+            else {
+                alert("Password is correct");
+            }
+        } 
+    </script>
+    <script>
+        function checkPasswordMatch() {
+            var password = $("#password").val();
+            var confirmPassword = $("#password1").val();
+            if (password != confirmPassword)
+                $("#CheckPasswordMatch").html("Passwords does not match!");
+            else
+                $("#CheckPasswordMatch").html("Passwords match.");
+        }
+        $(document).ready(function () {
+            $("#password1").keyup(checkPasswordMatch);
+        });
+    </script>
+
+</body>
+
+</html>
