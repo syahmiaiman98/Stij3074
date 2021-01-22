@@ -52,7 +52,6 @@ if (isset($_GET['id'])) {
 	<html>
     	<head>
 		<br><br><br>
-        	<title>Update Car Rental</title>
     	</head>
 
     <body>
