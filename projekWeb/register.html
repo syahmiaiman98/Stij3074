@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="">
+    <title>Register</title>
+    <style>
+        body {
+            background-image: url(https://techcrunch.com/wp-content/uploads/2017/05/gettyimages-580833893.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+
+        .center {
+            margin: auto;
+            width: 40%;
+            border: 3px solid #000000;
+            background-color: #ffffff;
+            padding: 10px;
+
+            color: #000000;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 18%;
+        }
+    </style>
+</head>
+
+<body>
+    <br><br><br><br>
+    <div class="center">
+        <h2 align="center">Registration</h2>
+
+        <form action="register.php" enctype="multipart/form-data" method="post" align="center"
+            onsubmit="return confirm('Are you sure you want to register?');">
+
+
+            <label for="name">Name :</label><br>
+            <input type="text" id="name" name="name" value="" required><br><br>
+
+            <label for="username">Username :</label><br>
+            <input type="text" id="username" name="username" value="" required><br><br>
+
+            <label for="userid">User ID :</label><br>
+            <input type="text" id="userid" name="userid" value="" required><br><br>
+
+            <label for="password">Password :</label><br>
+            <input type="password" id="password" name="password" value="" required><br>
+            <input type="checkbox" onclick="myFunction()">Show Password
+            <br><br>
+            <button type="submit" value="Submit" class="button">Submit</button>
+        </form>
+        <p align="center">Already register? <a href="login.html">Login</a></p>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+</body>
+
+</html>
