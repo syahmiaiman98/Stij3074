@@ -25,6 +25,7 @@ $result = $conn->query($sql);
 	 <!-- to make it looking good im using bootstrap -->
 	 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
   body {
 	background-image: url(https://techcrunch.com/wp-content/uploads/2017/05/gettyimages-580833893.jpg);
@@ -42,11 +43,11 @@ $result = $conn->query($sql);
 </head>
 <body>
 <br><br>
-<h1 align="center" >CAR RENTAL</h1>
-<p align="center"><a href="search.php"><i class="fa fa-search"> SEARCH</i></a></p>
+		<h1 align="center" >CAR RENTAL</h1>
+		<p align="center"><a href="search.php"><i class="fa fa-search"> SEARCH</i></a></p>
 		
 	<div class="container">
-	<button type="button" ><a href="login.php"> Login </a><br></button>
+	<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a><br>
 		<p> (N/A = Not Available , Not Applicable) </P>
 		
 			<div class="page">
