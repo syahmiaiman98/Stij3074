@@ -42,7 +42,8 @@ $result = $conn->query($sql);
 </head>
 <body>
 <br><br>
-		<h1 align="center">CAR RENTAL</h1>
+<h1 align="center" >CAR RENTAL</h1>
+<p align="center"><a href="search.php"><i class="fa fa-search"> SEARCH</i></a></p>
 		
 	<div class="container">
 	<button type="button" ><a href="login.php"> Login </a><br></button>

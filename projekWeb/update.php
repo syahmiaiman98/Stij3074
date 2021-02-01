@@ -65,6 +65,7 @@ if (isset($_GET['id'])) {
 	<html>
     	<head>
 		<br><br><br>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         	<title>Update Car Rental</title>
         	<style>
             	body {
@@ -89,21 +90,21 @@ if (isset($_GET['id'])) {
 		  <fieldset>
 		    <legend>Customer Information:</legend>
 			<div class="page">
-			<a href="view.php">Cancel</a><br><br>
+			<a href="view.php"><i class="fa fa-window-close"></i></a><br><br>
 		    Name :
 		    <input type="text" name="custname" value="<?php echo $customer_name; ?>">
 		    <input type="hidden" name="id" value="<?php echo $user_id; ?>">
 			-- Identity card (ic) :
-		    <input type="text" name="ic" value="<?php echo $customer_ic; ?>">
+		    <input type="number" name="ic" value="<?php echo $customer_ic; ?>">
 			-- Gender :
 		    <input type="radio" name="gender" value="Male" <?php if($gender == 'Male'){ echo "checked";} ?> >Male
 		    <input type="radio" name="gender" value="Female" <?php if($gender == 'Female'){ echo "checked";} ?>>Female
 		    <br><br>
 		    Phone Number :
-		    <input type="text" name="phonenumber" value="<?php echo $phone_number; ?>">
+		    <input type="number" name="phonenumber" value="<?php echo $phone_number; ?>">
 			<br><br>
 			Date rental (**/**/****):
-		    <input type="text" name="daterental" value="<?php echo $date_rental; ?>">
+		    <input type="date" name="daterental" value="<?php echo $date_rental; ?>">
 		    <br><br>
 			Address (full address) :
 		    <input type="text" name="address" value="<?php echo $address; ?>">
@@ -112,13 +113,13 @@ if (isset($_GET['id'])) {
 		    <input type="text" name="car" value="<?php echo $car; ?>">
 			<br><br>
 			time start (**:** a.m./p.m.) :
-			<input type="text" name="timestart" value="<?php echo $time_start; ?>">
+			<input type="time" name="timestart" value="<?php echo $time_start; ?>">
 			<br><br>
 			time finish (**:** a.m./p.m.) :
-			<input type="text" name="timefinish" value="<?php echo $time_finish; ?>">
+			<input type="time" name="timefinish" value="<?php echo $time_finish; ?>">
 			<br><br>
 		    Total rent (RM):
-		    <input type="text" name="totalrent" value="<?php echo $totalrent; ?>">
+		    <input type="number" name="totalrent" value="<?php echo $totalrent; ?>">
 		    <br><br>
 		   
 		    <input type="submit" value="Update" name="update">

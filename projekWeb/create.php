@@ -42,6 +42,7 @@ include_once("dbconnect.php");
 <!DOCTYPE html>
 <html>
   <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
           body {
             background-image: url(https://techcrunch.com/wp-content/uploads/2017/05/gettyimages-580833893.jpg);
@@ -67,21 +68,21 @@ include_once("dbconnect.php");
 
     <legend>Personal information:</legend>
     <div class="page">
-    <a href="view.php">Cancel </a>
+    <a href="view.php"><i class="fa fa-window-close"></i></a>
     <br><br>
     Name :
     <input type="text" name="custname">
     -- Identity card (ic) :
-    <input type="text" name="ic">
+    <input type="number" name="ic">
     -- Gender :
     <input type="radio" name="gender" value="Male">Male
     <input type="radio" name="gender" value="Female">Female
     <br><br>
     Phone Number :
-    <input type="text" name="phonenumber">
+    <input type="number" name="phonenumber">
     <br><br>
-    Date rental (**/**/****):
-    <input type="text" name="daterental">
+    Date rental :
+    <input type="date" name="daterental">
     <br><br>
     Address (full address) :
     <input type="text" name="address">
@@ -89,14 +90,14 @@ include_once("dbconnect.php");
     Car (with plate no.) :
     <input type="text" name="car">
     <br><br>
-    time start (**:** a.m./p.m.) :
-    <input type="text" name="timestart">
+    time start :
+    <input type="time" name="timestart">
     <br><br>
-    time finish (**:** a.m./p.m.) :
-    <input type="text" name="timefinish">
+    time finish :
+    <input type="time" name="timefinish">
     <br><br>
     total rent (RM) :
-    <input type="text" name="totalrent">
+    <input type="number" name="totalrent">
     <br><br>
     <input type="submit" name="submit" value="submit">
           </div>
