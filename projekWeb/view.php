@@ -38,6 +38,9 @@ $result = $conn->query($sql);
             padding: 10px;
 			border: 3px solid #000000;
         }
+		.lgout {
+			float: right;
+		}
         
   </style>
 </head>
@@ -47,13 +50,17 @@ $result = $conn->query($sql);
 		<p align="center"><a href="search.php"><i class="fa fa-search"> SEARCH</i></a></p>
 		
 	<div class="container">
-	<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a><br>
 		<p> (N/A = Not Available , Not Applicable) </P>
 		
-			<div class="page">
-			<button type="button"><a href="create.php">New Rental</a></button><br><br>
-				<table class="table">
-					<tr>
+		<div class="page">
+			<div class="lgout">
+				<a href="logout.php"><i class="fa fa-sign-out"></i></a> Logout<br>
+			</div>
+			
+			<a href="create.php"><i class="fa fa-plus-square"></i></a> New Rental<br><br>
+			
+			<table class="table">
+				<tr>
 					<th>ID</th>
 					<th>Name</th>
 					<th>Gender</th>
@@ -66,9 +73,9 @@ $result = $conn->query($sql);
 					<th>Time finish</th>
 					<th>Total Rent (RM)</th>
 					<th>Action</th>
-					</tr>
+				</tr>
 				
-	  		<tbody>	
+				<tbody>	
 		<?php
 			if ($result->rowCount() > 0) {
 				//output data of each row
